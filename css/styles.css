@@ -1,11 +1,11 @@
 
 
 :root {
-        --background-color: rgb(254, 176, 176);
-        --light-color: rgb(0, 255, 51);
-        --dark-color: rgb(0, 0, 0);
-        --link-color: rgb(1, 155, 155);
-    }
+    --background-color: rgb(255, 255, 255);
+    --light-color: rgb(0, 255, 51);
+    --dark-color: rgb(0, 0, 0);
+    --link-color: rgb(73, 89, 232);
+}
 
 body {
     font-optical-sizing: auto;
@@ -13,47 +13,102 @@ body {
 
 }
 
-    h3 {
-        color: rgb(93, 0, 0);
-        font-family: "cofo-raffine", sans-serif;
-        font-weight: 900;
-        font-style: normal;
+a {
+    font-family: "warbler-banner", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
+h3 {
+    color: rgb(93, 0, 0);
+    font-family: "cofo-raffine", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+h2 {
+    color: rgb(93, 0, 0);
+    font-family: "cofo-raffine", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+p {
+    color: rgb(49, 19, 157);
+    font-family: "warbler-banner", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#head h3 a{
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.post {
+    border: 1px solid var(--dark-color);
+    margin-bottom: 1em;
+    padding: .5em 1em;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
-    h2 {
-        color: rgb(93, 0, 0);
-        font-family: "cofo-raffine", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-
+    a {
+    color: var(--link-color);
+    background-color:  var(--background-color);
+    text-decoration: none;
     }
 
-    p {
-        color: rgb(49, 19, 157);
-        font-family: "warbler-banner", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#post {
+    border: 1px solid var(--light-color);
+    background-color: black;
+    margin-bottom: 5em;
+    padding: .5em 1em;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    a {
+    color: var(--light-color);
+    background-color:  black;
+    text-decoration: none;
     }
 
-    main {
-        position: relative;
-        max-width: 1080px;
-        margin: 0 auto;
+    a:hover {
+        text-decoration: underline;
     }
+}
 
-    #head {
-        display: flex;
-        justify-content: space-between;
-    }
+.special-headline {
+    font-weight: 1200;
+    color: rgb(255, 102, 0);
+}
 
-    #head h3 a{
-        color: var(--dark-color);
-        text-decoration: none;
-    }
-
-    .post {
-        border: 1px solid var(--dark-color);
-        margin-bottom: 1em;
-        padding: .5em 1em;
-    }
+#unique-headline {
+    font-weight: 600;
+    color: blue;
+}
