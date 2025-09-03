@@ -1,0 +1,19 @@
+body {
+
+    h1 {
+        color: rgb(93, 0, 0);
+        font-family: "cofo-raffine", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+
+    }
+
+    p {
+        color: rgb(49, 19, 157);
+        font-family: "warbler-banner", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+}
