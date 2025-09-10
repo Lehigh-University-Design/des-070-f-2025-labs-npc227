@@ -7,7 +7,11 @@
 
 body {
     font-optical-sizing: auto;
-
+    font-family: "warbler-banner", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: aqua;
+    background-color: blanchedalmond;
 
 }
 
@@ -146,6 +150,7 @@ footer {
     color: coral;
 }
 
+/*would only work if i removed block-div*/
 .block {
     display: block;
     border-radius: 1em;
@@ -194,6 +199,25 @@ footer {
     background-color: bisque;
 }
 
+.absolutedemoholder {
+    position: relative;
+    border: 5px dotted var(--dark-color);
+    width: 100%;
+    margin-bottom: 1em;
+    aspect-ratio: 4/3;
+}
+
+.absolutebubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: coral;
+    border-radius: 50px;
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+}
+
 .stickydemoholder {
     overflow: scroll;
     position: relative;
@@ -220,16 +244,16 @@ footer {
     margin-bottom: 3em;
 
     .img-right {
-        width: 15em;
-        height: auto;
+        width: 50px;
+        height: 50px;
         float: right;
         margin: 1em 0 1em 1em;
 
     }
 
     .img-left {
-        width: 200px;
-        height: 200px;
+        width: 50px;
+        height: 50px;
         float: right;
         margin: 1em 0 1em 1em;
 
