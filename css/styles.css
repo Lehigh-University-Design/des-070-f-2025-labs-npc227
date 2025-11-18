@@ -174,6 +174,10 @@ footer {
     font-weight: 900;
 }
 
+.inlineTreatedAsBlock {
+    margin: 1em 0;
+}
+
 .static {
     position: static;
     background-color: brown;
@@ -215,7 +219,8 @@ footer {
     height: 100px;
     background: coral;
     border-radius: 50px;
-    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    transform: translate(-50%, -50%);
+    /* This is a shorthand of translateX(-50%) and translateY(-50%) */
 }
 
 .stickydemoholder {
@@ -240,22 +245,157 @@ footer {
 
 .floatdemoholder {
     border: 1px var(--dark-color);
-    padding 0 1em;
+    padding: 1em;
     margin-bottom: 3em;
 
     .img-right {
-        width: 50px;
-        height: 50px;
+        width: 15em;
+        height: 15em;
         float: right;
         margin: 1em 0 1em 1em;
 
     }
 
     .img-left {
-        width: 50px;
-        height: 50px;
-        float: right;
-        margin: 1em 0 1em 1em;
+        width: 15em;
+        height: 15em;
+        float: left;
+        margin: 1em 1em 1em 0;
 
     }
+}
+
+.columndemoholder {
+    border: 1px solid var(--dark-color);
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow: hidden;
+
+    .column {
+        width: calc(100%/3 - 2rem);
+        aspect-ratio: 1;
+        float: left;
+        padding: 1rem;
+        font-size: 2em;
+        font-weight: 100;
+        font-style: italic;
+        background-color: blanchedalmond;
+
+        &:nth-child(even){
+            background-color: palevioletred;
+        }
+    }
+}
+
+/*lab 3 grid */
+
+.grid-parent {
+    display: grid;
+    /*grid template cols 25% 75%*/
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.grid-child {
+    padding: 2em;
+    min-height: 30vh;
+    background-color: rgb(31, 99, 76);
+    color: antiquewhite;
+}
+
+.grid-explicit-parent {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.grid-chess-lay {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-bottom: 1em;
+
+}
+
+.grid-chess-kid {
+    aspect-ratio: 1;
+    background-color: blueviolet;
+    transition: 0.5s;
+}
+
+/*note to self: go over lab github after class to ensure
+ all of lab 3 is included*/
+
+.grid-area-parent {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 1em;
+    margin-bottom: 1em;
+    grid-template-areas: 
+        'header header'
+        'sidebar main'
+        'footer footer';
+        /*notice how it looks like the grid visually*/
+}
+
+/*lab 4*/
+.flex-container-justify {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.flex-item {
+    width: 100px;
+    background-color: magenta;
+    margin: 1em;
+    padding: 1em;
+}
+
+.flex-container-align {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 60vh;
+    align-items: flex-end;
+    justify-content: center;
+
+    flex-direction: row-reverse;
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.flex-card {
+    width: calc(100%/3);
+    display: flex;
+}
+
+.flex-card-inner {
+    flex-grow: 1;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    text-align: center;
+    h4 {
+        background-color: black;
+        display: inline-block;
+        color: aqua;
+        padding: .25em;
+    }    
+    img {
+        border-radius: 50%;
+    }
+}
+
+.flex-card-inner > div:nth-child(2) {
+    flex-grow: 1;
 }
