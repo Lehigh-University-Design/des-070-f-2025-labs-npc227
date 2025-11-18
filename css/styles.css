@@ -313,6 +313,8 @@ footer {
 }
 
 .grid-chess-lay {
+    width:800px;
+    height: 800px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     margin-bottom: 1em;
@@ -325,8 +327,43 @@ footer {
     transition: 0.5s;
 }
 
+.grid-chess-kid:nth-child(-n + 8):nth-child(even),
+.grid-chess-kid:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+.grid-chess-kid:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+.grid-chess-kid:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+.grid-chess-kid:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+.grid-chess-kid:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+.grid-chess-kid:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+.grid-chess-kid:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+    background-color: rgb(255, 0, 247)
+}
+
+.grid-chess-kid:hover {
+    background-color: antiquewhite !important;
+}
+
 /*note to self: go over lab github after class to ensure
  all of lab 3 is included*/
+ /*Note to self: doing that now^^*/
+
+.grid-assign-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.grid-assign-child {
+    min-height: 1em;
+    background-color: navajowhite;
+}
+
+.grid-assign-special-child {
+    grid-row: 2 / 4; 
+    grid-column: 2 / 4; 
+    background-color: rgb(42, 137, 132);
+}
 
 .grid-area-parent {
     display: grid;
@@ -337,7 +374,58 @@ footer {
         'header header'
         'sidebar main'
         'footer footer';
-        /*notice how it looks like the grid visually*/
+}
+
+.grid-area-child {
+    min-height: 2em;
+    background-color: rebeccapurple;
+    padding: 1em;
+    color: wheat;
+    justify-content: center;
+    text-align: center;
+}
+
+.area-header {
+  grid-area: header;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+}
+
+.area-main {
+  grid-area: main;
+}
+
+.area-footer {
+  grid-area: footer;
+}
+
+.grid-alignment-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center; 
+  justify-items: center; 
+  align-content: center; 
+  align-items: center; 
+  gap: 1em;
+  margin-bottom: 1em;
+  background-color: navy;
+  min-height: 15em;
+}
+
+.grid-alignment-child {
+  width: 100px;
+  min-height: 1em;
+  background-color: goldenrod;
+}
+
+.quick-center-trick {
+  height: 60vh;
+  background-color: burlywood;
+  display: grid;
+  place-content: center; 
 }
 
 /*lab 4*/
